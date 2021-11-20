@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <div id="app">
+        <li v-for='(frameworks, i) in frameworks'>
+            The Frameworks {{frameworks}} was created by {{creator[i]}}
+        </li>
+        <hr>
+        <li v-for='(name, frameworks) in datas'>
+            The Frameworks {{frameworks}} was created by {{name}}
+        </li>
+
+    
+    </div>
+    <!--
+        " v-for " 2 array
+        Angular ---- Misko Hevery
+        Vue     ---- Even You
+        React   ---- Jordan Walke
+        Ember   ---- Yehuda Katz
+    -->
+    <!--CND V2-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                frameworks: ['Angular', 'Vue', 'React', 'Ember'],
+                creator: ['Misko Hevery', 'Even You', 'Jordan Walke', 'Yehuda Katz'],
+                datas:{
+                    Angular: 'Misko Hevery',
+                    Vue: 'Even You',
+                    React: 'Jordan Walke',
+                    Ember: 'Yehuda Katz'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <div id="app">
+        <p>
+            <input type="text" placeholder="Type the Text" v-model="text">
+            <button v-on:click="save()">To Save</button> {{datas}}
+        </p>
+    </div>
+    <!--CND V2-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <Script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                datas:[],
+                text:''
+            },
+            methods:{
+                save(){
+                    if(this.text != ' '){
+                        this.datas.push(this.text)
+                    }
+                    console.log('Text Error')
+                }
+            }
+        })
+    </Script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hooks</title>
+</head>
+<body>
+    <div id="app">
+        <center>
+            {{title}}
+            <hr>
+            <input type="text" v-model="name">
+            {{name}}
+        </center>   
+    </div>
+    <hr>
+    <!-- Independent Instances 
+        Hooks!
+    -->
+    <!--CND V2-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const uno = new Vue({
+            el: '#app',
+            data: {
+                title: ' Team Getter',
+                name: 'Maoly Lara'
+            },
+            // beforeCreate = after instance initialization - before component create.
+            beforeCreate(){
+                alert('Before component create. ' + this.name)
+            },
+            // created = run when instance, event, property etc
+            created(){
+                alert('Component create. ' + this.name)
+            },
+            // beforeMount: it is executed just before adding to the DOM.
+            beforeMount(){
+                alert('Before adding to the DOM. ' + this.name)
+            },
+            // mounted: executes is after adding it to the DOM.
+            mounted(){
+                alert('After adding it to the DOM. ' + this.name)
+            },
+            // beforeUpdate: run when the data object changes, the DOM does not.
+            beforeUpdate(){
+                alert('Data object changes. ' + this.name)
+            },
+            // updated: run after data object change - DOM show.
+            updated(){
+                alert('Data object change, the DOM. ' + this.name)
+            }
+            // beforeDestroy: run just before removing the instance.
+            
+            // destroyed: It is executed when the instance, directives etc are eliminated.
+            
+        })
+
+    </script>
+</body>
+</html>

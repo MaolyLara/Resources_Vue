@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directives v-show</title>
+</head>
+<body>
+    <!--Notes Calculator | 3.0 > A - 3.0< F | -->
+    <div id="app">
+        <input type="number" v-model="notes">
+        <!-- A true-->
+        <p v-show="results()">You passed the exam</p>
+        <!-- F false-->
+        <p v-show="!results()">You failed the exam</p>
+    </div>
+    <!--CND V2-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                notes: 0
+            },
+            methods:{
+                results(){
+                    if (this.notes >= 3.0 & this.notes <= 5.0){
+                        return true
+                    } else{
+                        return false
+                    }
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

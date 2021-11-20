@@ -1,0 +1,21 @@
+body{
+    background: rgb(161, 116, 202) !important;
+}
+h2{
+    color: rgb(45, 168, 250);
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    color: rgb(74, 161, 161);
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+label{
+    padding: 10px;
+    font-size: small;
+    font-family: serif;
+}
+hr{
+    color: black;
+}
